@@ -10,8 +10,6 @@
     <title>{{ '漆三代私塾' . ' - ' . $title }}</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}" />
-    <!-- Color modes -->
-    <script src="{{ asset('assets/js/vendors/color-modes.js') }}"></script>
     <!-- Libs CSS -->
     <link rel="stylesheet" href="{{ asset('assets/libs/simplebar/dist/simplebar.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/libs/bootstrap-icons/font/bootstrap-icons.min.css') }}" />
@@ -27,11 +25,11 @@
 </head>
 
 <body>
-    <livewire:components.navbar />
+    @include('livewire.components.navbar')
 
     {{ $slot }}
 
-    <livewire:components.footer />
+    @include('livewire.components.footer')
 
     <!-- Scroll top -->
     <div class="btn-scroll-top">
@@ -59,6 +57,8 @@
     <!-- cleave JS -->
     <script src="{{ asset('assets/libs/cleave.js/dist/cleave.min.js') }}"></script>
     <script src="{{ asset('assets/js/vendors/cleave-function.js') }}"></script>
+    <!-- Password JS -->
+    <script src="{{ asset('assets/js/vendors/password.js') }}"></script>
     <!-- sweetalert2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @livewireScripts

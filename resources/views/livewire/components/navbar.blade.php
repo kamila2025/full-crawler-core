@@ -6,7 +6,7 @@
         </button>
         <div class="offcanvas offcanvas-start offcanvas-nav" style="width: 20rem">
             <div class="offcanvas-header">
-                <a href="{{ url('/') }}" class="text-inverse"><img src="{{ asset('assets/images/logo.png') }}"
+                <a href="{{ url('/') }}" class="text-inverse"><img src="{{ asset('assets/img/logo.png') }}"
                         alt /></a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -21,10 +21,16 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ url('/#contact') }}" role="button">聯絡我們</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="" role="button" wire:navigate>課程專區</a>
-                    </li>
                 </ul>
+                <div class="mt-3 mt-lg-0 d-flex align-items-center">
+                    @guest('member')
+                        <a href="{{ route('login') }}" class="btn btn-light mx-2" wire:navigate>登入</a>
+                        <a href="{{ route('register') }}" class="btn btn-primary" wire:navigate>註冊</a>
+                    @endguest
+                    @auth('member')
+                        <a href="{{ route('logout') }}" class="btn btn-light mx-2" wire:navigate>登出</a>
+                    @endauth
+                </div>
             </div>
         </div>
     </div>
