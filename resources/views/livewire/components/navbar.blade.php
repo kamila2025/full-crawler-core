@@ -13,13 +13,16 @@
             <div class="offcanvas-body pt-0 align-items-center">
                 <ul class="navbar-nav mx-auto align-items-lg-center">
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ url('/#about') }}" role="button">關於我們</a>
+                        <a class="nav-link" href="{{ route('home') }}" role="button">首頁</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ url('/#feature') }}" role="button">教學特色</a>
+                        <a class="nav-link" href="{{ route('sport') }}" role="button">所有賽事</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ url('/#contact') }}" role="button">聯絡我們</a>
+                        <a class="nav-link" href="{{ route('product') }}" role="button">熱賣商品</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="" role="button">聯絡我們</a>
                     </li>
                 </ul>
                 <div class="mt-3 mt-lg-0 d-flex align-items-center">

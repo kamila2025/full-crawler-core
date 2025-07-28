@@ -5,9 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="language" content="tw" />
-    <meta name="description" content="帶你從零開始進入油漆工程這塊領域，集三代傳承之經典和現今進步的用料跟工法，帶你快速上手少走彎路。" />
-    <meta name="keywords" content="油漆, 油漆課程, 課程購買, 課程介紹, 油漆技術, 油漆知識, 油漆教學, 油漆培訓" />
-    <title>{{ '漆三代私塾' . ' - ' . $title }}</title>
+    <meta name="description" content="我們提供即時、深度的賽事預測服務，結合 AI 模型與專家分析，涵蓋足球、籃球、棒球等主流運動。" />
+    <meta name="keywords" content="賽事分析, 賽事預測, 賽事分析平台, 賽事分析報告, 賽事分析工具, 賽事分析服務, 賽事分析師, 賽事分析團隊" />
+    <title>{{ '賽事分析' . ' - ' . $title }}</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}" />
     <!-- Libs CSS -->
