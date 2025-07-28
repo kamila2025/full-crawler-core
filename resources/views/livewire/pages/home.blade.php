@@ -1,215 +1,290 @@
-<div>
-    <!--Pageheader start-->
-    {{-- <section class="container py-lg-8 py-5" data-cue="fadeIn">
-        <div class="row justify-content-center">
-            <!--Crossfade -->
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://unsplash.it/1200/600?image=1001" class="d-block w-100" alt="carousel">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://unsplash.it/1200/600?image=1002" class="d-block w-100" alt="carousel">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://unsplash.it/1200/600?image=1003" class="d-block w-100" alt="carousel">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://unsplash.it/1200/600?image=1004" class="d-block w-100" alt="carousel">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://unsplash.it/1200/600?image=1005" class="d-block w-100" alt="carousel">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section> --}}
-    <!--Pageheader end-->
+<style>
+    .table th,
+    .table td {
+        vertical-align: middle;
+        padding: 1rem 0.75rem;
+    }
 
-    <!--PageAbout start-->
-    <section class="py-5">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <div class="mb-5">
-                        <h2 class="mb-3">
-                            專業賽事分析
-                        </h2>
-                        <span class="lead mb-1">
-                            我們提供即時、深度的賽事預測服務，結合 AI 模型與專家分析，涵蓋足球、籃球、棒球等主流運動。
-                        </span>
+    .badge-pill {
+        padding: 0.5em 1em;
+        border-radius: 50rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+
+    .badge-blue {
+        background-color: #3b82f6;
+        color: white;
+    }
+
+    .badge-green {
+        background-color: #22c55e;
+        color: white;
+    }
+
+    .badge-red {
+        background-color: #ef4444;
+        color: white;
+    }
+
+    .btn-contact {
+        background-color: #8b5cf6;
+        color: white;
+        font-size: 0.875rem;
+        padding: 6px 14px;
+        border: none;
+        border-radius: 1.5rem;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-contact:hover {
+        background-color: #7c3aed;
+        transform: translateY(-1px);
+    }
+</style>
+
+<div>
+    <section class="jarallax hero-agency position-relative" data-jarallax data-speed="0.4">
+        <img class="jarallax-img" src="{{ asset('assets/images/banner.jpg') }}" alt="banner" />
+
+        <!-- 藍色遮罩 -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(33, 74, 192, 0.6); z-index: 1;">
+        </div>
+
+        <!-- 文字內容層 -->
+        <div class="position-absolute start-0 end-0" style="z-index: 2;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-7 col-12" data-cue="zoomIn">
+                        <div class="text-center text-lg-start">
+                            <div class="mb-4 text-white">
+                                <h1 class="mb-3 mt-3 display-3 fw-bold text-white">BY運彩專業運動分析網</h1>
+                                <p class="lead mb-0">專業的體育賽事預測和分析平台</p>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="mb-5 list-unstyled">
-                        <li class="mb-3 d-flex">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-check-circle-fill text-primary mt-1" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                            </svg>
-                            <span class="ms-2">專屬會員每日推薦</span>
-                        </li>
-                        <li class="mb-3 d-flex">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-check-circle-fill text-primary mt-1" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                            </svg>
-                            <span class="ms-2">歷史戰績分析與數據圖表</span>
-                        </li>
-                        <li class="mb-3 d-flex">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-check-circle-fill text-primary mt-1" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                            </svg>
-                            <span class="ms-2">準確率最高達88%</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <figure>
-                        <img src="https://unsplash.it/600/600?image=1000" alt="events" class="img-fluid rounded-3" />
-                    </figure>
                 </div>
             </div>
         </div>
     </section>
-    <!--PageAbout end-->
 
     <section class="py-5 bg-light-subtle">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12 text-center">
-                    <h2 class="fw-bold mb-0">最新賽事資料</h2>
-                    <p class="text-muted">即時更新的賽事預測，掌握第一手分析資訊</p>
+                    <h2 class="fw-bold mb-0">歷史數據</h2>
                 </div>
             </div>
 
-            <div class="table-responsive">
-                <table class="table table-bordered align-middle text-center bg-white shadow-sm">
-                    <thead class="table-primary">
-                        <tr>
-                            <th scope="col">日期</th>
-                            <th scope="col">運動</th>
-                            <th scope="col">隊伍 A</th>
-                            <th scope="col">隊伍 B</th>
-                            <th scope="col">預測勝方</th>
-                            <th scope="col">信心指數</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2025-07-28</td>
-                            <td>棒球</td>
-                            <td>統一獅</td>
-                            <td>樂天桃猿</td>
-                            <td><span class="text-success fw-semibold">統一獅</span></td>
-                            <td><span class="badge bg-success">88%</span></td>
-                        </tr>
-                        <tr>
-                            <td>2025-07-28</td>
-                            <td>籃球</td>
-                            <td>湖人</td>
-                            <td>勇士</td>
-                            <td><span class="text-success fw-semibold">勇士</span></td>
-                            <td><span class="badge bg-warning text-dark">72%</span></td>
-                        </tr>
-                        <tr>
-                            <td>2025-07-29</td>
-                            <td>足球</td>
-                            <td>巴塞隆納</td>
-                            <td>皇家馬德里</td>
-                            <td><span class="text-success fw-semibold">皇家馬德里</span></td>
-                            <td><span class="badge bg-info text-dark">65%</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="row g-5">
+                <div class="table-responsive">
+                    <table
+                        class="table table-hover table-bordered table-striped align-middle text-center shadow-sm rounded overflow-hidden">
+                        <thead class="table-light">
+                            <tr>
+                                <th>類型</th>
+                                <th>開賽時間</th>
+                                <th>主場隊伍</th>
+                                <th>讓盤</th>
+                                <th>客場隊伍</th>
+                                <th>官方推薦</th>
+                                <th>戰績</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sportTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <a href="{{ route('sport') }}" class="btn btn-outline-primary">查看更多歷史數據</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="lineModal" tabindex="-1" aria-labelledby="lineModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-center p-4">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title w-100" id="lineModalLabel">LINE帳號: @085oedmu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="{{ asset('assets/images/line-qr.png') }}" alt="LINE QR Code" class="img-fluid"
+                            style="max-width: 240px;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <!--Landing pages start-->
     <section class="my-xl-7 py-5">
         <div class="container mb-xl-7">
             <div class="row mb-5">
                 <div class="col-12 text-center">
-                    <h2 class="fw-bold">熱賣商品</h2>
+                    <h2 class="fw-bold">賽事新聞</h2>
                 </div>
             </div>
 
-            @php
-                $products = [
-                    [
-                        'title' => '單場分析報告',
-                        'desc' => '專業分析，助您精準判斷',
-                        'price' => 199,
-                        'image' => 'https://unsplash.it/400/300?image=1025',
-                    ],
-                    [
-                        'title' => 'VIP 月訂閱',
-                        'desc' => '完整賽事資料庫，包含歷史戰績、數據圖表與專家分析',
-                        'price' => 999,
-                        'image' => 'https://unsplash.it/400/300?image=1003',
-                    ],
-                    [
-                        'title' => '數據庫存取權',
-                        'desc' => '專屬會員可使用分析工具查詢各項資料',
-                        'price' => 399,
-                        'image' => 'https://unsplash.it/400/300?image=1062',
-                    ],
-                ];
-            @endphp
+            <div class="row g-5" id="newsCards"></div>
 
-            <div class="row g-4">
-                @foreach ($products as $product)
-                    <div class="col-md-4">
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <a href="{{ route('news') }}" class="btn btn-outline-primary">查看更多賽事新聞</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light-subtle">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold mb-0">關於我們</h2>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-4 col-12">
+                    <h3 class="mb-3">專業分析</h3>
+                    <figure class="mb-3 card-lift">
+                        <img src="{{ asset('assets/images/about-1.jpg') }}" alt="about-1"
+                            class="img-fluid rounded-3" />
+                    </figure>
+                    <div class="d-flex">
+                        <div class="ms-2">
+                            <span>深度數據解析</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="mb-3">賽事預測</h3>
+                    <figure class="mb-3 card-lift">
+                        <img src="{{ asset('assets/images/about-2.jpg') }}" alt="location"
+                            class="img-fluid rounded-3" />
+                    </figure>
+                    <div class="d-flex">
+                        <div class="ms-2">
+                            <span>精準投注建議</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="mb-3">實時資訊</h3>
+                    <figure class="mb-3 card-lift">
+                        <img src="{{ asset('assets/images/about-3.jpg') }}" alt="location"
+                            class="img-fluid rounded-3" />
+                    </figure>
+                    <div class="d-flex">
+                        <div class="ms-2">
+                            <span>24小時更新資訊</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="text-primary fw-semibold">
+                        ★全台灣最專業的賽事資訊！一家致力於提供台灣彩券與運彩預測的專業平台，
+                        透過數據分析與專家團隊，為用戶提供高品質的預測資訊，協助用戶獲得更高的赢面！
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background: linear-gradient(135deg, #1f2937, #111827);">
+        <div class="container text-center">
+            <h5 class="fw-bold text-warning mb-4" style="font-size: 1.5rem;">免責聲明</h5>
+            <p class="text-white mb-3" style="font-size: 1.125rem; line-height: 1.9;">
+                本站資料來源為台灣運彩與其他公開資料，不保證其正確性亦不負任何責任。<br>
+                本服務是整理與分析各方資訊，結果僅供參考性質，使用者須自行承擔相關風險。<br>
+                在任何情況下均不得轉載或向第三人揭露該等資料。如違反上述規定，本站得以終止會員之資格。
+            </p>
+            <p class="text-warning fw-bold" style="font-size: 1.25rem;">
+                未成年人不得購買彩券，請謹慎評估投注風險！
+            </p>
+        </div>
+    </section>
+</div>
+
+<script src="{{ asset('assets/js/news.js') }}"></script>
+<script src="{{ asset('assets/js/sport.js') }}"></script>
+<script>
+    function renderNewsCards(filter = "") {
+        const $container = $("#newsCards");
+        $container.empty();
+
+        newsData
+            .slice(0, 4)
+            .forEach((news, index) => {
+                const shortDesc = news.desc.length > 20 ?
+                    news.desc.substring(0, 20) + "..." :
+                    news.desc;
+
+                const card = `
+                    <div class="col-md-6">
                         <div class="card shadow-sm h-100 border-0 card-lift overflow-hidden">
                             <div class="row h-100 g-0">
-                                <!-- 左圖 -->
-                                <a href="" class="col-lg-5 col-md-12"
-                                    style="
-                                        background-image: url('{{ $product['image'] }}');
-                                        background-size: cover;
-                                        background-repeat: no-repeat;
-                                        background-position: center;
-                                        min-height: 13rem;
-                                    ">
-                                </a>
-
-                                <!-- 右側內容 -->
+                                <div class="col-lg-5 col-md-12 d-flex align-items-center justify-content-center bg-primary text-white fs-1 fw-bold"
+                                    style="min-height: 13rem;">
+                                    ${news.icon}
+                                </div>
                                 <div class="col-lg-7 col-md-12">
                                     <div
-                                        class="card-body h-100 d-flex flex-column justify-content-between border rounded-end-lg-3 rounded-bottom-3 border-start-lg-0">
-                                        <div>
-                                            <h4 class="fw-semibold mb-2">
-                                                <a href="" class="text-reset">
-                                                    {{ $product['title'] }}
-                                                </a>
+                                        class="card-body h-100 d-flex align-items-start flex-column border rounded-end-lg-3 rounded-bottom-3 rounded-top-0 rounded-start-lg-0 border-start-lg-0 border-top-0 border-top-lg">
+                                        <div class="mb-4">
+                                            <small class="text-uppercase fw-semibold ls-md">${news.category}</small>
+                                            <h4 class="my-2">
+                                                <a href="/news/${index}" class="text-reset text-decoration-none">${news.title}</a>
                                             </h4>
-                                            <p class="text-muted small mb-0">{{ $product['desc'] }}</p>
+                                            <small>${news.date}</small>
                                         </div>
-                                        <div class="pt-3">
-                                            <h5 class="fw-bold text-primary">NT$ {{ $product['price'] }}</h5>
-                                        </div>
+                                        <p class="mb-4 small text-muted">${shortDesc}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    <!--Landing pages end-->
-</div>
+                    </div>`;
+                $container.append(card);
+            });
+    }
+
+    function renderSportTable() {
+        const $tbody = $("#sportTableBody");
+        $tbody.empty();
+
+        sportData.slice(0, 6).forEach(item => {
+            const recommendBtn = `<button type="button" class="btn-contact">聯繫客服</button>`;
+            const resultBadge = `<span class="badge-pill ${
+            item.result === "贏" ? "badge-green" : "badge-red"
+            }">${item.result}</span>`;
+
+            const row = `
+                <tr class="bg-white">
+                    <td><span class="badge-pill badge-blue">${item.category}</span></td>
+                    <td>${item.date}</td>
+                    <td>${item.home}</td>
+                    <td>${item.handicap}</td>
+                    <td>${item.away}</td>
+                    <td>${recommendBtn}</td>
+                    <td>${resultBadge}</td>
+                </tr>
+            `;
+            $tbody.append(row);
+        });
+    }
+
+    $(function() {
+        renderNewsCards();
+        renderSportTable();
+    });
+
+    $(document).on("click", ".btn-contact", function() {
+        const modal = new bootstrap.Modal(document.getElementById('lineModal'));
+        modal.show();
+    });
+</script>

@@ -4,13 +4,13 @@ namespace App\Livewire\Pages;
 
 use Livewire\Component;
 
-class News extends Component
+class About extends Component
 {
     public function render()
     {
-        return view('livewire.pages.news')
+        return view('livewire.pages.about')
             ->layout('components.layouts.app', [
-                'title' => '賽事新聞',
+                'title' => '關於我們',
             ]);
     }
 }

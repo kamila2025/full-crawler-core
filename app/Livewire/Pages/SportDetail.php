@@ -10,7 +10,7 @@ class SportDetail extends Component
     {
         return view('livewire.pages.sport-detail')
             ->layout('components.layouts.app', [
-                'title' => '賽事詳情',
+                'title' => '歷史數據',
             ]);
     }
 }

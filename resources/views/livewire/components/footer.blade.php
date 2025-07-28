@@ -1,84 +1,57 @@
-<footer class="pt-7 bg-light-subtle" id="contact">
+<footer class="pt-5 bg-light-subtle" id="contact">
     <div class="container">
-        <div class="row align-items-start g-4">
-            <!-- LOGO區 -->
-            <div class="col-lg-6 col-md-6 text-start ps-lg-4">
-                <a href="/">
-                    <img src="{{ asset('assets/images/logo.png') }}" alt="logo" class="img-fluid"
+        <div class="row g-4 align-items-start">
+            <!-- LOGO 區 -->
+            <div class="col-lg-3 col-md-6 text-start">
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('assets/images/logo.gif') }}" alt="logo" class="img-fluid"
                         style="max-width: 180px;">
                 </a>
             </div>
 
-            <!-- 右側連結 -->
-            <div class="col-lg-6 col-md-6">
-                <div class="row" id="ft-links">
-                    <div class="col-lg-3 col-6 mb-4 mb-lg-0">
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2">
-                                <a href="{{ route('home') }}" class="text-decoration-none text-reset">首頁</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="{{ route('news') }}" class="text-decoration-none text-reset">最新公告</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="{{ route('sport') }}" class="text-decoration-none text-reset">賽事分析</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="{{ route('product') }}" class="text-decoration-none text-reset">方案介紹</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-6 mb-4 mb-lg-0">
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2">
-                                <a href="#" class="text-decoration-none text-reset">服務條款</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="text-decoration-none text-reset">隱私權政策</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-6 mb-4 mb-lg-0">
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2">
-                                <a href="#" class="text-decoration-none text-reset">會員註冊</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#" class="text-decoration-none text-reset">會員登入</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-6 text-lg-end">
-                        <div class="d-flex justify-content-start justify-content-lg-end gap-2">
-                            <a href="https://lin.ee/eiSFo8V" class="btn btn-line btn-icon text-reset" target="_blank">
-                                <i class="bi bi-line"></i>
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=100093953665075"
-                                class="btn btn-facebook btn-icon text-reset" target="_blank">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="https://www.tiktok.com/@boss.feng" class="btn btn-tiktok btn-icon text-reset"
-                                target="_blank">
-                                <i class="bi bi-tiktok"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <!-- 導覽連結 -->
+            <div class="col-lg-2 col-6">
+                <h5 class="fw-bold mb-3">網站導覽</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ route('home') }}" class="text-reset text-decoration-none">首頁</a></li>
+                    <li><a href="{{ route('news') }}" class="text-reset text-decoration-none">賽事新聞</a></li>
+                    <li><a href="{{ route('sport') }}" class="text-reset text-decoration-none">歷史數據</a></li>
+                    <li><a href="{{ route('about') }}" class="text-reset text-decoration-none">關於我們</a></li>
+                    <li><a href="{{ route('about') }}" class="text-reset text-decoration-none">購買教程</a></li>
+                </ul>
+            </div>
+
+            <!-- 條款與隱私 -->
+            <div class="col-lg-2 col-6">
+                <h5 class="fw-bold mb-3">政策條款</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ route('terms') }}" class="text-reset text-decoration-none">服務條款</a></li>
+                    <li><a href="{{ route('privacy') }}" class="text-reset text-decoration-none">隱私權政策</a></li>
+                </ul>
+            </div>
+
+            <!-- 會員操作 -->
+            <div class="col-lg-2 col-6">
+                <h5 class="fw-bold mb-3">會員中心</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ route('register') }}" class="text-reset text-decoration-none">會員註冊</a></li>
+                    <li><a href="{{ route('login') }}" class="text-reset text-decoration-none">會員登入</a></li>
+                </ul>
+            </div>
+
+            <!-- QR Code -->
+            <div class="col-lg-3 col-12 text-lg-end text-center">
+                <img src="{{ asset('assets/images/line-qr.png') }}" alt="LINE QR Code" class="img-fluid"
+                    style="max-height: 160px;">
             </div>
         </div>
-    </div>
 
-    <!-- 下方版權 -->
-    <div class="container mt-7 mb-3">
-        <div class="row">
-            <div class="col-12 text-center">
-                <div class="small">
-                    Copyright © 2025
-                    <span class="text-primary">
-                        <a href="{{ route('home') }}">賽事分析平台</a>
-                    </span>
-                </div>
-            </div>
+        <!-- 版權聲明 -->
+        <div class="text-center small text-muted py-4 mt-4 border-top">
+            Copyright © 2025
+            <span class="text-primary">
+                <a href="{{ route('home') }}" class="text-primary text-decoration-none">賽事分析平台</a>
+            </span>
         </div>
     </div>
 </footer>

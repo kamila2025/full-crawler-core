@@ -9,6 +9,8 @@ Route::get('/news/{news}', App\Livewire\Pages\NewsDetail::class)->name('news-det
 Route::get('/sports', App\Livewire\Pages\Sport::class)->name('sport');
 Route::get('/sports/{sport}', App\Livewire\Pages\SportDetail::class)->name('sport-detail');
 
+Route::get('/about', App\Livewire\Pages\About::class)->name('about');
+
 Route::get('/products', App\Livewire\Pages\Product::class)->name('product');
 Route::get('/products/{product}', App\Livewire\Pages\ProductDetail::class)->name('product-detail');
 

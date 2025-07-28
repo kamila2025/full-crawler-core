@@ -11,7 +11,7 @@ class Sport extends Component
     {
         return view('livewire.pages.sport')
             ->layout('components.layouts.app', [
-                'title' => '所有賽事',
+                'title' => '歷史數據',
             ]);
     }
 }

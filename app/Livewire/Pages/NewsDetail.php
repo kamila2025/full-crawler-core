@@ -10,7 +10,7 @@ class NewsDetail extends Component
     {
         return view('livewire.pages.news-detail')
             ->layout('components.layouts.app', [
-                'title' => '最新公告',
+                'title' => '賽事新聞',
             ]);
     }
 }
