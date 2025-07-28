@@ -11,15 +11,15 @@ use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
 
 class Register extends Component
 {
-    public $email;
+    public $phone;
     public $password;
     public $confirmPassword;
 
-    protected $listeners = ['redirectLogin'];
+    protected $listeners = ['redirectHome'];
 
-    public function redirectLogin()
+    public function redirectHome()
     {
-        return redirect()->route('login');
+        return redirect()->route('home');
     }
 
     public function register()
@@ -28,20 +28,20 @@ class Register extends Component
             DB::beginTransaction();
 
             $attributes = $this->validate([
-                'email'             => 'required|email|max:255|unique:members,email',
+                'phone'             => 'required|max:10',
                 'password'          => 'required|max:255|min:6',
                 'confirmPassword'   => 'required|max:255|min:6|same:password',
             ], [], [
-                'email'             => '信箱',
+                'phone'             => '手機號碼',
                 'password'          => '密碼',
                 'confirmPassword'   => '確認密碼',
             ]);
 
             // 檢查信箱是否已被註冊
-            $existingMember = Member::where('email', $attributes['email'])->first();
+            $existingMember = Member::where('phone', $attributes['phone'])->first();
             if ($existingMember) {
                 LivewireAlert::title('註冊失敗')
-                    ->text('該信箱已被註冊')
+                    ->text('該手機號碼已被註冊')
                     ->error()
                     ->withConfirmButton('OK')
                     ->show();
@@ -50,13 +50,13 @@ class Register extends Component
 
             // 註冊會員
             Member::create([
-                'email'     => $attributes['email'],
+                'phone'     => $attributes['phone'],
                 'password'  => Hash::make($attributes['password']),
             ]);
 
             // 登入會員
             Auth::guard('member')->attempt([
-                'email'     => $attributes['email'],
+                'phone'     => $attributes['phone'],
                 'password'  => $attributes['password'],
             ]);
 
@@ -65,7 +65,7 @@ class Register extends Component
             LivewireAlert::title('註冊成功')
                     ->success()
                     ->withConfirmButton('OK')
-                    ->onConfirm('redirectLogin')
+                    ->onConfirm('redirectHome')
                     ->show();
         }
         catch (\Throwable $e) {

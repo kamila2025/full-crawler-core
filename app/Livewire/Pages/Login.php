@@ -11,7 +11,7 @@ use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
 
 class Login extends Component
 {
-    public $email;
+    public $phone;
     public $password;
     public $remember = false;
 
@@ -26,14 +26,14 @@ class Login extends Component
     {
         try{
             $attributes = $this->validate([
-                'email'             => 'required|email|max:255',
+                'phone'             => 'required|max:10',
                 'password'          => 'required|max:255|min:6',
             ], [], [
-                'email'             => '信箱',
+                'phone'             => '手機號碼',
                 'password'          => '密碼',
             ]);
 
-            $member = Member::where('email', $attributes['email'])->first();
+            $member = Member::where('phone', $attributes['phone'])->first();
             if (!$member || $member->status == MemberStatusEnum::停用) {
                 LivewireAlert::title('登入失敗')
                     ->text('帳號不存在或已停用')
@@ -43,17 +43,27 @@ class Login extends Component
                 return;
             }
 
-            Auth::guard('member')->attempt([
-                'email'     => $attributes['email'],
-                'password'  => $attributes['password'],
+            $success = Auth::guard('member')->attempt([
+                'phone'    => $attributes['phone'],
+                'password' => $attributes['password'],
             ], $this->remember);
 
-            LivewireAlert::title('登入成功')
-                    ->success()
+
+            if (!$success) {
+                LivewireAlert::title('登入失敗')
+                    ->text('手機號碼或密碼錯誤')
+                    ->error()
                     ->withConfirmButton('OK')
-                    ->onConfirm('redirectHome')
                     ->show();
-        }
+                return;
+            }
+
+            LivewireAlert::title('登入成功')
+                ->success()
+                ->withConfirmButton('OK')
+                ->onConfirm('redirectHome')
+                ->show();
+            }
         catch (\Throwable $e) {
             LivewireAlert::title('登入失敗')
                     ->text($e->getMessage())

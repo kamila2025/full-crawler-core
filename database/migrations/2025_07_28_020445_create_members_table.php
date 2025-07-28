@@ -14,13 +14,12 @@ return new class extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable()->comment('姓名');
-            $table->string('email')->comment('信箱');
+            $table->string('phone')->comment('電話');
             $table->string('password')->comment('密碼');
-            $table->string('phone')->nullable()->comment('電話');
             $table->string('status')->nullable()->comment('狀態');
             $table->timestamps();
 
-            $table->unique(['email']);
+            $table->unique(['phone']);
         });
     }
 

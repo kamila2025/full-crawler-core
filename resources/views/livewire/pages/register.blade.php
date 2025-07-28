@@ -23,13 +23,13 @@
                         <div class="card-body">
                             <form class="needs-validation mb-6" wire:submit.prevent="register" novalidate>
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">
-                                        信箱
+                                    <label for="phone" class="form-label">
+                                        手機號碼
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <input type="email" class="form-control" id="email" wire:model="email"
+                                    <input type="text" class="form-control" id="phone" wire:model="phone"
                                         required />
-                                    <div class="invalid-feedback">請輸入信箱</div>
+                                    <div class="invalid-feedback">請輸入手機號碼</div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">
