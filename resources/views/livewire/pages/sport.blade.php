@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
                     <div class="text-center mb-8">
-                        <h1>所有賽事</h1>
+                        <h1>賽事分析</h1>
                     </div>
                 </div>
             </div>
@@ -29,6 +29,48 @@
                     <div class="row gy-4 mb-lg-8 mb-6">
                         <div class="col-md-12">
                             <h3 class="mb-0">美國大聯盟（MLB）</h3>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="{{ route('sport-detail', 1) }}" class="text-reset text-decoration-none">
+                                <div class="card shadow-sm h-100 border-0 card-lift overflow-hidden">
+                                    <div class="row h-100 g-0">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div
+                                                class="card-body h-100 d-flex align-items-start flex-column border rounded-end-lg-3 rounded-bottom-3 rounded-top-0 rounded-start-lg-0 border-start-lg-0 border-top-0 border-top-lg">
+                                                <div class="mb-5">
+                                                    <h4 class="my-2">匹茲堡海盜 vs 費城費城人</h4>
+                                                    <small>2025-07-28</small>
+                                                </div>
+                                                <div class="mt-auto">
+                                                    <small class="me-2">10:00AM</small>
+                                                    <small>完賽</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="{{ route('sport-detail', 1) }}" class="text-reset text-decoration-none">
+                                <div class="card shadow-sm h-100 border-0 card-lift overflow-hidden">
+                                    <div class="row h-100 g-0">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div
+                                                class="card-body h-100 d-flex align-items-start flex-column border rounded-end-lg-3 rounded-bottom-3 rounded-top-0 rounded-start-lg-0 border-start-lg-0 border-top-0 border-top-lg">
+                                                <div class="mb-5">
+                                                    <h4 class="my-2">匹茲堡海盜 vs 費城費城人</h4>
+                                                    <small>2025-07-28</small>
+                                                </div>
+                                                <div class="mt-auto">
+                                                    <small class="me-2">10:00AM</small>
+                                                    <small>完賽</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                         <div class="col-md-12">
                             <a href="{{ route('sport-detail', 1) }}" class="text-reset text-decoration-none">

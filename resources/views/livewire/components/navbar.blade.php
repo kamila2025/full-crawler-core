@@ -16,13 +16,13 @@
                         <a class="nav-link" href="{{ route('home') }}" role="button">首頁</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ route('sport') }}" role="button">所有賽事</a>
+                        <a class="nav-link" href="{{ route('news') }}" role="button">最新公告</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{ route('product') }}" role="button">熱賣商品</a>
+                        <a class="nav-link" href="{{ route('sport') }}" role="button">賽事分析</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="" role="button">聯絡我們</a>
+                        <a class="nav-link" href="{{ route('product') }}" role="button">方案介紹</a>
                     </li>
                 </ul>
                 <div class="mt-3 mt-lg-0 d-flex align-items-center">

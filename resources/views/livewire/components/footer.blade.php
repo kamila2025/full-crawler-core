@@ -18,13 +18,13 @@
                                 <a href="{{ route('home') }}" class="text-decoration-none text-reset">首頁</a>
                             </li>
                             <li class="mb-2">
-                                <a href="{{ route('sport') }}" class="text-decoration-none text-reset">所有賽事</a>
+                                <a href="{{ route('news') }}" class="text-decoration-none text-reset">最新公告</a>
                             </li>
                             <li class="mb-2">
-                                <a href="{{ route('product') }}" class="text-decoration-none text-reset">熱賣商品</a>
+                                <a href="{{ route('sport') }}" class="text-decoration-none text-reset">賽事分析</a>
                             </li>
                             <li class="mb-2">
-                                <a href="#" class="text-decoration-none text-reset">聯絡我們</a>
+                                <a href="{{ route('product') }}" class="text-decoration-none text-reset">方案介紹</a>
                             </li>
                         </ul>
                     </div>

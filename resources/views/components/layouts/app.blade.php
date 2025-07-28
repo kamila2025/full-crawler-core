@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/theme.min.css') }}" />
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="{{ asset('assets/libs/swiper/swiper-bundle.min.css') }}" />
+    <!-- jquery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     @livewireStyles
 </head>
 
@@ -39,8 +41,6 @@
         </svg>
     </div>
 
-    <!-- jquery JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Libs JS -->
     <script src="{{ asset('assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/libs/simplebar/dist/simplebar.min.js') }}"></script>

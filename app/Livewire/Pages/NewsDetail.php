@@ -3,15 +3,14 @@
 namespace App\Livewire\Pages;
 
 use Livewire\Component;
-use App\Models\SportMatch;
 
-class Sport extends Component
+class NewsDetail extends Component
 {
     public function render()
     {
-        return view('livewire.pages.sport')
+        return view('livewire.pages.news-detail')
             ->layout('components.layouts.app', [
-                'title' => '所有賽事',
+                'title' => '最新公告',
             ]);
     }
 }

@@ -1,6 +1,6 @@
 <div>
     <!--Pageheader start-->
-    <section class="container py-lg-8 py-5" data-cue="fadeIn">
+    {{-- <section class="container py-lg-8 py-5" data-cue="fadeIn">
         <div class="row justify-content-center">
             <!--Crossfade -->
             <div id="carouselExampleFade" class="carousel slide carousel-fade">
@@ -33,11 +33,11 @@
                 </button>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--Pageheader end-->
 
     <!--PageAbout start-->
-    <section class="py-5 bg-light-subtle" id="about">
+    <section class="py-5">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
@@ -86,8 +86,61 @@
     </section>
     <!--PageAbout end-->
 
+    <section class="py-5 bg-light-subtle">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold mb-0">最新賽事資料</h2>
+                    <p class="text-muted">即時更新的賽事預測，掌握第一手分析資訊</p>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle text-center bg-white shadow-sm">
+                    <thead class="table-primary">
+                        <tr>
+                            <th scope="col">日期</th>
+                            <th scope="col">運動</th>
+                            <th scope="col">隊伍 A</th>
+                            <th scope="col">隊伍 B</th>
+                            <th scope="col">預測勝方</th>
+                            <th scope="col">信心指數</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025-07-28</td>
+                            <td>棒球</td>
+                            <td>統一獅</td>
+                            <td>樂天桃猿</td>
+                            <td><span class="text-success fw-semibold">統一獅</span></td>
+                            <td><span class="badge bg-success">88%</span></td>
+                        </tr>
+                        <tr>
+                            <td>2025-07-28</td>
+                            <td>籃球</td>
+                            <td>湖人</td>
+                            <td>勇士</td>
+                            <td><span class="text-success fw-semibold">勇士</span></td>
+                            <td><span class="badge bg-warning text-dark">72%</span></td>
+                        </tr>
+                        <tr>
+                            <td>2025-07-29</td>
+                            <td>足球</td>
+                            <td>巴塞隆納</td>
+                            <td>皇家馬德里</td>
+                            <td><span class="text-success fw-semibold">皇家馬德里</span></td>
+                            <td><span class="badge bg-info text-dark">65%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
     <!--Landing pages start-->
-    <section class="my-xl-7 py-5" id="feature">
+    <section class="my-xl-7 py-5">
         <div class="container mb-xl-7">
             <div class="row mb-5">
                 <div class="col-12 text-center">

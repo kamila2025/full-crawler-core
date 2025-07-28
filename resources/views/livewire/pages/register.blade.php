@@ -55,6 +55,14 @@
                                         <div class="invalid-feedback">請輸入確認密碼</div>
                                     </div>
                                 </div>
+                                <div class="mb-3 small text-muted">
+                                    點擊註冊，即表示您已閱讀並同意
+                                    <a href="{{ route('terms') }}" class="text-primary text-decoration-underline"
+                                        target="_blank">服務條款</a>
+                                    與
+                                    <a href="{{ route('privacy') }}" class="text-primary text-decoration-underline"
+                                        target="_blank">隱私權政策</a>
+                                </div>
                                 <div class="d-grid">
                                     <button class="btn btn-primary" type="submit">註冊</button>
                                 </div>
