@@ -6,15 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class SportMatch extends Model
 {
-    protected $table = 'sport_matchs';
+    protected $table = 'sports_matches';
 
     protected $fillable = [
-        'league',
-        'home_team',
-        'away_team',
-        'home_score',
-        'away_score',
-        'match_time',
-        'status',
+        'match_date',
+        'category',
+        'team_top',
+        'team_bottom',
+        'spread',
+        'result',
+    ];
+
+    protected $casts = [
+        'result' => SportMatchResultEnum::class,
     ];
 }
